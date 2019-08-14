@@ -33,6 +33,11 @@ class LoginController extends Controller
         return back()
             ->withErrors(['email' => trans('auth.failed')])
             ->withInput(request(['email']));
+    }
+    public function logout()
+    {
+        Auth::logout();
 
+        return redirect ('/');
     }
 }
