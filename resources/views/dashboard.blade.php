@@ -14,13 +14,13 @@
         </div>
 
         <div class="panel-body">
-            <strong>Email: </strong> {{ auth()->user()->email}}
+            <strong>Correo Electronico: </strong> {{ auth()->user()->email}}<br/> 
         </div>
         <div class="panel-footer">
 
             <form method="POST" action="{{ route ('logout')}}">
                 {{ csrf_field() }}
-                <button class="btn btn-danger btn-xs btn-block">Cerrar sesion</button>
+                <button class="btn btn-primary btn-block">Cerrar sesion</button>
             </form>
         </div>
     </div>
