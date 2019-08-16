@@ -2,7 +2,7 @@
  
 Route::get('/', 'Auth\LoginController@showLoginForm');
 
-Route::get('dashboard','DashboardController@index')->name('dashboard');
+Route::get('home','DashboardController@index')->name('home');
 
 Route::post('login','Auth\LoginController@login')->name('login');
 
@@ -20,3 +20,4 @@ Route::group(['middleware' => ['auth']], function ()
     Route::post('users', 'UsersController@createUser');
 
 });
+Auth::routes();

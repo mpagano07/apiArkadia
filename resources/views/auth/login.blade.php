@@ -2,13 +2,11 @@
 
 @section('content')
 
-<div class="row">
-    <div class="col-md-4.col-md-offset-4">
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-
-                <h1 class="panel-title">Acceso a la aplicacion</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <h1 class="card-header">Arkadia</h1>
 
             </div>
             <div class="panel-body">
@@ -17,12 +15,12 @@
                     {{ csrf_field() }}
 
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
-                        <label for="name">Username</label>
+                        <label for="name">Nombre de usuario</label>
 
                         <input class="form-control"  
                         name="name" 
                         value="{{ old('name') }}"
-                        placeholder="Ingresa tu username">
+                        placeholder="Ingresa tu nombre de usuario">
 
                         {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
 
@@ -33,7 +31,7 @@
                         <input class="form-control" 
                         type="password" 
                         name="password" 
-                        placeholder="Ingresa tu password">
+                        placeholder="Ingresa tu contraseña">
 
                         {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                     </div>
