@@ -13,12 +13,12 @@ class UsersController extends Controller
      */
     public function index(Request $request)
     {
-        if ($request->isJson()) {
+        // if ($request->isJson()) {
             //Eloquent
             $users = User::all();
             return response()->json($users, 200);
-        }
-        return response()->json(['error' => 'Unauthorized'], 401, []);
+        // }
+        // return response()->json(['error' => 'Unauthorized'], 401, []);
     }
 
     /**
@@ -28,7 +28,7 @@ class UsersController extends Controller
      */
     public function createUser(Request $request)
     {
-        if ($request->isJson()) {
+        // if ($request->isJson()) {
             // TODO: Create the user in the DB
             $data = $request->json()->all();
 
@@ -41,9 +41,9 @@ class UsersController extends Controller
             ]);
 
             return response()->json($user, 201);
-        }
+        // }
 
-        return response()->json(['error' => 'Unauthorized'], 401, []);
+        // return response()->json(['error' => 'Unauthorized'], 401, []);
     }
 
     /**
@@ -104,7 +104,7 @@ class UsersController extends Controller
 
     function getToken(Request $request)
     {
-        if ($request->isJson()) {
+        // if ($request->isJson()) {
             try {
                 $data = $request->json()->all();
 
@@ -119,8 +119,8 @@ class UsersController extends Controller
             } catch (ModelNotFoundException $e) {
                 return response()->json(['error' => 'No content'], 406);
             }
-        }
+        // }
         
-        return response()->json(['error' => 'Unauthorized'], 401, []);
+        // return response()->json(['error' => 'Unauthorized'], 401, []);
     }
 }
