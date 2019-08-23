@@ -11,3 +11,5 @@ Route::post('logout','Auth\LoginController@logout')->name('logout');
 Route::post('users/login', 'UsersController@getToken')->name('users');
 
 Auth::routes();
+
+Route::get('/phpfirebase_sdk','FirebaseController@index');

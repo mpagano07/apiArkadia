@@ -20,6 +20,26 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBioETDjtfeucr_nDeS0r4Bf34BeonboC4",
+    authDomain: "arkadia-893fa.firebaseapp.com",
+    databaseURL: "https://arkadia-893fa.firebaseio.com",
+    projectId: "arkadia-893fa",
+    storageBucket: "arkadia-893fa.appspot.com",
+    messagingSenderId: "167169734775",
+    appId: "1:167169734775:web:cfef89d7c313d502"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
